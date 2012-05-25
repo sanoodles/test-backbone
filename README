@@ -1,0 +1,2 @@
+Crear una API Rest JSON de un solo recursos (por ejemplo: articles),
+y una aplicación backbone que consuma este recurso y muestre una lista, un show, edit, destroy, new.

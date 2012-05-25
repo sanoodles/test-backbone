@@ -1,0 +1,8 @@
+#articles .editing .display,
+#articles .edit {
+  display: none;
+}
+#articles .display,
+#articles .editing .edit {
+  display: block;
+}
