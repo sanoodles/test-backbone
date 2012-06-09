@@ -42,8 +42,10 @@ $(function () {
          * GUID in the database. This generates the next order number for new items.
          */
         nextOrder: function () {
-            if (!this.length) return 1;
-            return parseInt(this.last().get('order')) + 1;
+            if (!this.length) {
+                return 1;
+            }
+            return parseInt(this.last().get('order'), 10) + 1;
         },
 
         // Articles are sorted by their original insertion order.
@@ -52,7 +54,7 @@ $(function () {
         }
     });
 
-    var Articles = new ArticleList;
+    var Articles = new ArticleList();
 
 
 
@@ -64,7 +66,7 @@ $(function () {
 
     var ArticleView = Backbone.View.extend({
 
-        tagName:  "div",
+        tagName: "div",
 
         template: _.template($('#article-template').html()),
 
@@ -116,7 +118,9 @@ $(function () {
 
         // Pressing enter closes the "editing" mode.
         updateOnEnter: function (e) {
-            if (e.keyCode === 13) this.close();
+            if (e.keyCode === 13) {
+                this.close();
+            }
         },
 
         // Remove the article, destroy the model.
@@ -195,7 +199,7 @@ $(function () {
 
     });
 
-    var App = new AppView;
+    var App = new AppView();
 
 
 
