@@ -45,12 +45,12 @@ $(function () {
             if (!this.length) {
                 return 1;
             }
-            return parseInt(this.last().get('order'), 10) + 1;
+            return parseInt(this.last().get('ord'), 10) + 1;
         },
 
         // Articles are sorted by their original insertion order.
         comparator: function (article) {
-            return article.get('order');
+            return article.get('ord');
         }
     });
 
@@ -186,7 +186,7 @@ $(function () {
                 title: this.title.val(),
                 author: this.author.val(),
                 content: this.content.val(),
-                order: Articles.nextOrder(),
+                ord: Articles.nextOrder(),
             };
         },
 
